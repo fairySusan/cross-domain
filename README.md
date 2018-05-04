@@ -30,15 +30,15 @@ node server.js
 <p>a.html http://127.0.0.1:8080</p>
 <p>a.html要跨域请求的url：http://127.0.0.1:8081</p>
 <P>在8081端口的后端设置允许8080端口跨域的代码</p>
-<p>app.all('*', function (req, res, next) {
-    res.header("Access-Control-Allow-Credentials", true)
-    res.header("Access-Control-Allow-Origin", "http://127.0.0.1:8080")
-    res.header("Access-Control-Allow-Headers", "X-Requested-With")
-    res.header("Access-Control-Allow-Methods", "PUT,POST,GET,DELETE,OPTIONS")
-    res.header("X-Powered-By", ' 3.2.1')
-    res.header("Content-Type", "application/json;charset=utf-8")
-    next()
-  })
+<p>app.all('*', function (req, res, next) {<br>
+    res.header("Access-Control-Allow-Credentials", true)<br>
+    res.header("Access-Control-Allow-Origin", "http://127.0.0.1:8080")<br>
+    res.header("Access-Control-Allow-Headers", "X-Requested-With")<br>
+    res.header("Access-Control-Allow-Methods", "PUT,POST,GET,DELETE,OPTIONS")<br>
+    res.header("X-Powered-By", ' 3.2.1')<br>
+    res.header("Content-Type", "application/json;charset=utf-8")<br>
+    next()<br>
+  })<br>
 </p>
 <h2>二 服务器代理跨域</h2>
 <p>a.html去请求后端，后端去请求不同源的目的服务器，然后再把请求到的数据传给a.html</p>
