@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>document.domain跨域b页面</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div>
+        <h1>我是b页面啊！</h1>
+    </div>
+    <iframe id="frameWindow" src="http://127.0.0.1:8080/a.html" style="display:none;"
+     onload="getData()"></iframe>
+</body>
+<script>
+    document.domain = '127.0.0.1';
+    function getData(){
+        var frameWindow = document.getElementById('frameWindow');
+        var win = frameWindow.contentWindow;
+        console.log("win.name:"+win.name);
+    }
+</script>
+</html>

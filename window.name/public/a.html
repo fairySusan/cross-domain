@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Window.name跨域-a页面</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div>
+        <h1>我是a页面</h1>
+        <a href="http://127.0.0.1:8080/b.html" target="_self">跳转到b页面</a>
+    </div>
+</body>
+<script>
+    var txt = [
+            {
+                "name":"张三",
+                "age":24
+            },{
+                "name":"李四",
+                "age":20
+            }
+        ];
+    window.name= JSON.stringify(txt);
+</script>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>window.postMessage跨域a页面</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div>
+        <h1>我是a页面呐！</h1>
+    </div>
+    <iframe id="iframeWindow" src="http://127.0.0.1:3000/b.html" style="display:none" onload="getData()"></iframe>
+</body>
+<script>
+    function getData(){
+        var iframeWindow = document.getElementById('iframeWindow');
+        var win = iframeWindow.contentWindow;
+        win.postMessage("我是a页面的消息","*");
+    }
+</script>
+</html>

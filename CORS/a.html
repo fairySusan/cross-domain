@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>cors跨域a页面</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div>
+        <h1>我是a页面啊！</h1>
+    </div>
+</body>
+<script>
+    window.onload = function(){
+        var xmlHttp;
+        if (window.XMLHttpRequest) {
+            xmlHttp = new XMLHttpRequest;
+        }else{
+            xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlHttp.open("GET","http://127.0.0.1:8081/getData",true);
+        xmlHttp.send();
+        xmlHttp.onreadystatechange = function(){
+            if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                var res = xmlHttp.responseText;
+                console.log(res);
+                alert(res);
+            }
+        }
+    }
+</script>
+</html>
