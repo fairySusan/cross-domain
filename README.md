@@ -4,11 +4,11 @@
 <p>2.浏览器的不同源的框架之间不能进行js的交互操作</p>
 
 <p>实验都是用node.js搭建的本地服务器，这里的不同源都是设置的端口号不同</p>
-下载express框架
-npm init
-npm install express --save
-开启本地服务
-node server.js
+<p>下载express框架</p>
+<p>npm init</p>
+<p>npm install express --save</p>
+<p>开启本地服务</p>
+<p>node server.js</p>
 <h1>前端跨域</h1>
 <h2>一 window.name跨域</h2>
 <p>b.html去获取a.html的数据</p>
