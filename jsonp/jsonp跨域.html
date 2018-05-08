@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jsonp实现跨域跨域</title>
+</head>
+<body>
+	<h1>一般采用动态创建script标签的方法，实现jsonp跨域</h1>
+</body>
+<script type="text/javascript">
+    function handleResponse(response){
+            console.log(response);
+    }
+</script>
+<script type="text/javascript" src="https://api.douban.com/v2/book/search?q=javascript&count=1&callback=handleResponse">
+</script>
+</html>
